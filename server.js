@@ -101,7 +101,7 @@ app.post("/create-secret", async (req, res) => {
 
   try {
     const response = await axios.post(`${API_URL}secrets`, body, bearer_Config);
-    const notification = `Secret created successfully!`;
+    const notification = JSON.stringify(response.data);
     res.render("index.ejs", { notification });
   } catch (error) {
     const error_Message = errorHandler(error);
@@ -117,8 +117,8 @@ app.post("/change-secret", (req, res) => {
 
   axios
     .put(`${API_URL}secrets/${id}`, body, bearer_Config)
-    .then(() => {
-      const notification = `Secret has been changed successfully!`;
+    .then((response) => {
+      const notification = JSON.stringify(response.data);
       res.render("index.ejs", { notification });
     })
     .catch((error) => {
@@ -141,8 +141,8 @@ app.post("/modify-secret", (req, res) => {
 
   axios
     .patch(`${API_URL}secrets/${id}`, body, bearer_Config)
-    .then(() => {
-      const notification = `Your secret has been successfully modified!`;
+    .then((response) => {
+      const notification = JSON.stringify(response.data);
       res.render("index.ejs", { notification });
     })
     .catch((error) => {
@@ -156,8 +156,8 @@ app.post("/delete-secret", (req, res) => {
 
   axios
     .delete(`${API_URL}secrets/${id}`, bearer_Config)
-    .then(() => {
-      const notification = `secret with ID ${id} has been deleted successfully`;
+    .then((response) => {
+      const notification = JSON.stringify(response.data);
       res.render("index.ejs", { notification });
     })
     .catch((error) => {
