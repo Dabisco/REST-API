@@ -1,0 +1,80 @@
+.card {
+  padding: 1rem;
+  background-color: white;
+  margin-top: 3rem;
+  width: 600px;
+}
+
+.card .server-response {
+  background-color: rgb(240, 240, 240);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  height: 95px;
+}
+
+.card label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.card input {
+  margin-bottom: 0.5rem;
+  padding: 0.7rem;
+  border-radius: 0.37rem;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+/* BUTTONS */
+
+.btn {
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.37rem;
+  font-size: 1rem;
+}
+
+.btn-green {
+  background-color: rgb(46, 204, 113);
+  transition: background-color 0.15s;
+}
+
+.btn-green:hover {
+  background-color: rgb(39, 174, 96);
+}
+
+.btn-blue {
+  background-color: rgb(52, 152, 219);
+  transition: background-color 0.15s;
+}
+
+.btn-blue:hover {
+  background-color: rgb(41, 128, 185);
+}
+
+.btn-purple {
+  background-color: rgb(155, 89, 182);
+  transition: background-color 0.15s;
+}
+
+.btn-purple:hover {
+  background-color: rgb(142, 68, 173);
+}
+
+.btn-yellow {
+  background-color: rgb(241, 196, 15);
+  transition: background-color 0.15s;
+}
+
+.btn-yellow:hover {
+  background-color: rgb(243, 156, 18);
+}
+
+.btn-red {
+  background-color: rgb(231, 76, 60);
+  transition: background-color 0.15s;
+}
+
+.btn-red:hover {
+  background-color: rgb(192, 57, 43);
+}

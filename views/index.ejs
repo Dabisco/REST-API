@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/layout.css" />
+    <link rel="stylesheet" href="/styles/utilities.css" />
+    <link rel="stylesheet" href="/styles/main.css" />
+  </head>
+  <body>
+    <div class="card mx-auto">
+      <div class="server-response w-100 pt-10 pl-2">Waiting for data...</div>
+
+      <form>
+        <label for="id">Id:</label>
+        <input class="w-100" type="text" name="id" id="id" />
+        <label for="secret">Secret:</label>
+        <input class="w-100" type="text" name="secret" id="secret" />
+        <label for="score">Score:</label>
+        <input class="w-100" type="text" name="score" id="score" />
+        <label>Route:</label>
+        <button
+          class="btn btn-green"
+          type="submit"
+          formmethod="GET"
+          formaction="/get-secret"
+        >
+          GET
+        </button>
+
+        <button
+          class="btn btn-blue"
+          type="submit"
+          formmethod="POST"
+          formaction="/post-secret"
+        >
+          POST
+        </button>
+
+        <button
+          class="btn btn-purple"
+          type="submit"
+          formmethod="POST"
+          formaction="/change-secret"
+        >
+          PUT
+        </button>
+
+        <button
+          class="btn btn-yellow"
+          type="submit"
+          formmethod="POST"
+          formaction="/modify-secret"
+        >
+          PATCH
+        </button>
+
+        <button
+          class="btn btn-red"
+          type="submit"
+          formmethod="POST"
+          formaction="/delete-secret"
+        >
+          DELETE
+        </button>
+      </form>
+    </div>
+  </body>
+</html>
