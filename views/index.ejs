@@ -11,7 +11,21 @@
   </head>
   <body>
     <div class="card mx-auto">
-      <div class="server-response w-100 pt-10 pl-2">Waiting for data...</div>
+      <% if (locals.secret) { %>
+      <div class="server-response w-100 pt-10 pb-4 pl-2"><%= secret %></div>
+      <% } else if (locals.notification) { %>
+      <div class="server-response w-100 pt-10 pb-4 pl-2">
+        <%= notification %>
+      </div>
+      <% } else if (locals.error_Message) { %>
+      <div class="server-response w-100 pt-10 pb-4 pl-2">
+        <%= error_Message %>
+      </div>
+      <% } else { %>
+      <div class="server-response w-100 pt-10 pb-4 pl-2">
+        Waiting for data...
+      </div>
+      <% } %>
 
       <form>
         <label for="id">Id:</label>
@@ -34,7 +48,7 @@
           class="btn btn-blue"
           type="submit"
           formmethod="POST"
-          formaction="/post-secret"
+          formaction="/create-secret"
         >
           POST
         </button>
